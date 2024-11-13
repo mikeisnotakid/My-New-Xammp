@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <link rel="icon" type="img/png" href="Img/favicon.png">
+
+
+  <link href="css/general.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/queries.css" rel="stylesheet" />
+
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+  <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+
+
+  <script defer src="JS/script.js"></script>
+  <title>Balaz FX</title>
+</head>
+
+<body>
+
+  <!-- HEADER SECTION -->
+
+  <header class="header container">
+    <div>
+      <a class="logo" href="#">
+        <img class="logo-img" src="Img/logo .png" />
+      </a>
+    </div>
+    <div class="user">
+
+      <p class="user-name">Bala</p>
+      <i class="fa fa-user-circle user-icon" aria-hidden="true"></i>
+      <div class="btn-cover">
+        <button onclick="logOutBtn()" class="user-btn"><i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+      </div>
+    </div>
+
+    <button onclick="openClose()" class="btn-mobile-nav">
+      <i id="open-nav" class="fa fa-bars icon-mobile-nav" aria-hidden="true"></i>
+      <i id="close-nav" class="fa fa-times icon-mobile-nav close" aria-hidden="true"></i>
+    </button>
+
+    <a id="logout-btn" href="Sign_in.php">Log Out</a>
+  </header>
+
+  <!-- NAVIGATION SECTION -->
+
+  <nav id="main-nav" class="main-nav">
+    <ul class="main-nav-links">
+
+      <div class="user-mobile">
+        <div>
+          <i class="fa fa-user-circle user-icon" aria-hidden="true"></i>
+          <p class="user-name">Bala</p>
+        </div>
+      </div>
+
+      <li><a class="main-nav-link" href="dashboard.php">
+          <i class="fa fa-home" aria-hidden="true"></i>
+          <span>Dashboard</span></a></li>
+      <li><a class="main-nav-link" href="portfolio.html">
+          <i class="fa fa-briefcase" aria-hidden="true"></i>
+          <span>Portfolio</span></a></li>
+      <li><a class="main-nav-link" href="deposit.php">
+          <i class="fa fa-credit-card" aria-hidden="true"></i>
+          <span>Fund Wallet</span></a></li>
+      <li><a class="main-nav-link" href="withdraw.html">
+          <i class="fa fa-money" aria-hidden="true"></i>
+          <span>Withdraw</span></a></li>
+      <li><a class="main-nav-link" href="history.html">
+          <i class="fa fa-history" aria-hidden="true"></i>
+          <span>History</span></a></li>
+      <li><a class="main-nav-link" href="crypto.html">
+          <i class="fa fa-btc" aria-hidden="true"></i>
+          <span>Crypto</span></a></li>
+
+      <div>
+        <a class="logout-btn-mobile" href="Sign_in.php">Log Out</a>
+      </div>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <!-- PORTFOLIO SECTION -->
+
+    <section class="section-portfolio">
+      <div class="port-content">
+        <div>
+          <button onclick="history.back()" class="back-btn">
+            <i class="fa fa-arrow-left back-btn-icon" aria-hidden="true"></i>
+          </button>
+
+          <p class="heading-primary">PORTFOLIO</p>
+
+          <div class="info">
+            <p class="heading-secondary">Your Crypto Currencies</p>
+
+            <div class="info-lists">
+              <table>
+                <table class="info-list">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Deposited</th>
+                      <th>Duration</th>
+                      <th>Total</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>BTC</td>
+                      <td>$200.00</td>
+                      <td>1 Month(s)</td>
+                      <td>$200</td>
+                      <td class="progress"><span>active</span><svg class="prog-icon" xmlns="http://www.w3.org/2000/svg"
+                          width="62" height="9" viewBox="0 0 62 9" fill="none">
+                          <rect x="0.691162" y="0.445312" width="61" height="8" rx="4" fill="#EAECF0" />
+                          <rect x="0.691162" y="0.121338" width="54" height="8" rx="4" fill="#15CF74" />
+                        </svg></td>
+                    </tr>
+                    <tr>
+                      <td>ETH</td>
+                      <td>$689</td>
+                      <td>1 Month(s)</td>
+                      <td>$4,478</td>
+                      <td class="progress"><span>active</span><svg class="prog-icon" xmlns="http://www.w3.org/2000/svg"
+                          width="62" height="9" viewBox="0 0 62 9" fill="none">
+                          <rect x="0.691162" y="0.445312" width="61" height="8" rx="4" fill="#EAECF0" />
+                          <rect x="0.691162" y="0.121338" width="54" height="8" rx="4" fill="#15CF74" />
+                        </svg></td>
+                    </tr>
+                    <tr>
+                      <td>BNB</td>
+                      <td>$200</td>
+                      <td>1 Month(s)</td>
+                      <td>$200</td>
+                      <td class="progress"><span>active</span><svg class="prog-icon" xmlns="http://www.w3.org/2000/svg"
+                          width="62" height="9" viewBox="0 0 62 9" fill="none">
+                          <rect x="0.691162" y="0.445312" width="61" height="8" rx="4" fill="#EAECF0" />
+                          <rect x="0.691162" y="0.121338" width="54" height="8" rx="4" fill="#15CF74" />
+                        </svg></td>
+                    </tr>
+                    <tr>
+                      <td>DOGE</td>
+                      <td>$1000</td>
+                      <td>1 Month(s)</td>
+                      <td>$3,200</td>
+                      <td class="progress"><span>active</span><svg class="prog-icon" xmlns="http://www.w3.org/2000/svg"
+                          width="62" height="9" viewBox="0 0 62 9" fill="none">
+                          <rect x="0.691162" y="0.445312" width="61" height="8" rx="4" fill="#EAECF0" />
+                          <rect x="0.691162" y="0.121338" width="54" height="8" rx="4" fill="#15CF74" />
+                        </svg></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </table>
+            </div>
+          </div>
+
+          <div class="port-map">
+            <div class="port-map-text">
+              <p class="heading-tertiary">My portfolio</p>
+              <span class="bal-num">$47,567.00</span>
+            </div>
+            <p class="port-map-date">Dec 18,2023</p>
+            <img class="port-map-img" src="Img/portfolio.png" alt="readings" />
+          </div>
+        </div>
+
+        <div class="portfolio-bal">
+          <div class="bal balance">
+            <ion-icon class="bal-wall" name="wallet-outline"></ion-icon>
+            <div class="bal-text">
+              <span>Wallet Balance:</span>
+              <span class="bal-num">$ 12,569</span>
+            </div>
+          </div>
+
+          <div class="bal balance">
+            <ion-icon class="port-wall" name="wallet-outline"></ion-icon>
+            <div class="bal-text">
+              <span>Portfolio Balance:</span>
+              <span class="bal-num">$ 3,285</span>
+            </div>
+          </div>
+
+          <div class="insights">
+            <p class="heading-tertiary">PORTFOLIO INSIGHTS</p>
+
+            <div class="insight-text">
+              <p>Invest in crypto</p>
+              <a class="insight-link" href="crypto.html">Review &rarr;</a>
+            </div>
+
+            <div class="insight-text">
+              <p>Recent Transactions</p>
+              <a class="insight-link" href="history.html">See all &rarr;</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+  </main>
+
+  <footer>
+    Copyright � 2023 - BalaxTrade. All rights reserved
+  </footer>
+
+</body>
+<script src="OwlCarousel2-2.3.4/docs_src/assets/vendors/jquery.min.js"></script>
+<script src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+
+</html>

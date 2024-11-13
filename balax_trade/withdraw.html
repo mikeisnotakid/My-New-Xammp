@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <link rel="icon" type="img/png" href="Img/favicon.png">
+
+
+  <link href="css/general.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/queries.css" rel="stylesheet" />
+
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+  <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+
+
+  <script defer src="JS/script.js"></script>
+  <title>Balaz FX</title>
+</head>
+
+<body>
+
+  <!-- HEADER SECTION -->
+
+  <header class="header container">
+    <div>
+      <a class="logo" href="#">
+        <img class="logo-img" src="Img/logo .png" />
+      </a>
+    </div>
+    <div class="user">
+
+      <p class="user-name">Bala</p>
+      <i class="fa fa-user-circle user-icon" aria-hidden="true"></i>
+      <div class="btn-cover">
+        <button onclick="logOutBtn()" class="user-btn"><i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+      </div>
+    </div>
+
+    <button onclick="openClose()" class="btn-mobile-nav">
+      <i id="open-nav" class="fa fa-bars icon-mobile-nav" aria-hidden="true"></i>
+      <i id="close-nav" class="fa fa-times icon-mobile-nav close" aria-hidden="true"></i>
+    </button>
+
+    <a id="logout-btn" href="Sign_in.php">Log Out</a>
+  </header>
+
+
+  <!-- NAVIGATION SECTION -->
+
+  <nav id="main-nav" class="main-nav">
+    <ul class="main-nav-links">
+
+      <div class="user-mobile">
+        <div>
+          <i class="fa fa-user-circle user-icon" aria-hidden="true"></i>
+          <p class="user-name">Bala</p>
+        </div>
+      </div>
+
+      <li><a class="main-nav-link" href="dashboard.php">
+          <i class="fa fa-home" aria-hidden="true"></i>
+          <span>Dashboard</span></a></li>
+      <li><a class="main-nav-link" href="portfolio.html">
+          <i class="fa fa-briefcase" aria-hidden="true"></i>
+          <span>Portfolio</span></a></li>
+      <li><a class="main-nav-link" href="deposit.php">
+          <i class="fa fa-credit-card" aria-hidden="true"></i>
+          <span>Fund Wallet</span></a></li>
+      <li><a class="main-nav-link" href="withdraw.html">
+          <i class="fa fa-money" aria-hidden="true"></i>
+          <span>Withdraw</span></a></li>
+      <li><a class="main-nav-link" href="history.html">
+          <i class="fa fa-history" aria-hidden="true"></i>
+          <span>History</span></a></li>
+      <li><a class="main-nav-link" href="crypto.html">
+          <i class="fa fa-btc" aria-hidden="true"></i>
+          <span>Crypto</span></a></li>
+
+      <div>
+        <a class="logout-btn-mobile" href="Sign_in.php">Log Out</a>
+      </div>
+    </ul>
+  </nav>
+
+
+  <main class="container">
+    <!-- WITHDRAWAL SECTION -->
+
+    <section class="section-withdrawal">
+      <div class="withdrawal-content">
+        <div>
+          <button onclick="history.back()" class="back-btn">
+            <i class="fa fa-arrow-left back-btn-icon" aria-hidden="true"></i>
+          </button>
+
+          <p class="heading-primary">Withdraw</p>
+          <div class="fund-with-form">
+            <div>
+              <label for="crypto">Assets</label>
+              <select id="crypto" required>
+                <option value="Bitcoin">Bitcoin</option>
+                <option value="Ethereum">Ethereum</option>
+                <option value="USDT">USDT</option>
+                <option value="BNB">BNB</option>
+                <option value="Dogecoin">Dogecoin</option>
+                <option value="Chain Link">Chain Link</option>
+                <option value="Bitcoin cash">Bitcoin cash</option>
+                <option value="ADA">ADA</option>
+                <option value="Matic">Matic</option>
+                <option value="Tron">Tron</option>
+                <option value="Cake">Cake</option>
+                <option value="Solana">Solana</option>
+              </select>
+              <svg class="crypto-icon" height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M16 32C7.163 32 0 24.837 0 16S7.163 0 16 0s16 7.163 16 16-7.163 16-16 16zm5.002-22.145l.81-3.241-2.596-.646-.643 2.575a8.277 8.277 0 00-1.298-.323l.644-2.575L15.323 5l-.81 3.241c-2.983.542-5.509 2.737-6.28 5.823s.426 6.206 2.804 8.08l-.81 3.242 2.596.646.643-2.575a8.277 8.277 0 001.298.323l-.644 2.575 2.596.645.81-3.241a7.974 7.974 0 005.2-3.385l-2.847-.708a5.373 5.373 0 01-5.134 1.43c-2.866-.712-4.62-3.572-3.917-6.387s3.599-4.519 6.466-3.806a5.357 5.357 0 013.86 3.667l2.846.708a7.947 7.947 0 00-2.998-5.423z" />
+              </svg>
+            </div>
+
+            <div>
+              <label for="amount">Amount to withdraw</label>
+              <input id="amount" type="number" placeholder="Amount (USD)" required />
+              <svg class="crypto-icon" height="32" width="32" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M16 32C7.163 32 0 24.837 0 16S7.163 0 16 0s16 7.163 16 16-7.163 16-16 16zm6.5-12.846c0-2.523-1.576-3.948-5.263-4.836v-4.44c1.14.234 2.231.725 3.298 1.496l1.359-2.196a9.49 9.49 0 00-4.56-1.776V6h-2.11v1.355c-3.032.234-5.093 1.963-5.093 4.486 0 2.64 1.649 3.925 5.19 4.813v4.58c-1.577-.234-2.886-.935-4.269-2.01L9.5 21.35a11.495 11.495 0 005.724 2.314V26h2.11v-2.313c3.08-.257 5.166-1.963 5.166-4.533zm-7.18-5.327c-1.867-.537-2.327-1.168-2.327-2.15 0-1.027.8-1.845 2.328-1.962zm4.318 5.49c0 1.122-.873 1.893-2.401 2.01v-4.229c1.892.538 2.401 1.168 2.401 2.22z"
+                  fill-rule="evenodd" />
+              </svg>
+            </div>
+            <div>
+              <label for="email">Email Address</label>
+              <input id="email" type="email" placeholder="steve@example.com" required />
+            </div>
+            <div>
+              <label for="amount">Wallet Address</label>
+              <input id="address" type="text" placeholder="4uhdi8ie09e8u470ofjdj9d" required />
+            </div>
+          </div>
+
+
+          <!-- Modal -->
+          <div id="success-modal" class="modal  text-align-center container">
+            <div class="modal-content ">
+              <p class="heading-secondary">Withdrawal Processing</p>
+              <span class="modal-icon"><i class="fa fa-check" aria-hidden="true"></i>
+              </span>
+              <button onclick="modalClose()" class="modal-close"><i class="fa fa-times modal-close-icon"
+                  aria-hidden="true"></i></button>
+            </div>
+          </div>
+
+          <button onclick="myModal()" class="fund-with-link"> Withdraw</button>
+
+        </div>
+    </section>
+    </div>
+  </main>
+  <footer>
+    Copyright � 2023 - BalaxTrade. All rights reserved
+  </footer>
+
+</body>
+<script src="OwlCarousel2-2.3.4/docs_src/assets/vendors/jquery.min.js"></script>
+<script src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+
+</html>
