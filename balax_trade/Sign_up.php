@@ -16,6 +16,9 @@
 		<link rel="stylesheet" type="text/css" href="CSS/Sign_up.css">
 	</head>
 
+	<?php 	
+    include 'signup_logic.php'; 
+	?>
 
 	<body>
 		<div class="sides mobile-hidden">
@@ -33,11 +36,11 @@
 
 				<div class="form">
 
-					<form action="sign_up_logic.php" method="post">
+					<form action="" method="POST">
 					Fullname:<br>
-				    <input type="text" id="email" name="fname" placeholder="Surname/Firstname/Middlename" autocomplete="on" required>
+				    <input type="text" id="email
+" name="fullname" placeholder="Surname/Firstname/Middlename" autocomplete="on" required>
 				    <br><br>
-
 				    Email address:<br>
 				    <input type="text" id="email" name="email" placeholder="email@gmail.com" autocomplete="on" required>
 				    <br><br>
@@ -61,7 +64,7 @@
 						<br><br>
 
 					State Of Origin:<br>
-					  	<select name="states" required>
+					  	<select name="state" required>
 						  <option value="">-- select one --</option>
 						  <option value="Abia">Abia</option>
 						  <option value="Adamawa">Adamawa</option>
@@ -104,7 +107,7 @@
 						<br><br>
 
 					Birthday:<br>
-  						<input type="date" name="birthday" required>
+  						<input type="date" name="dob" required>
   						<br><br>
 
 					Select Gender:<br>
@@ -122,13 +125,24 @@
 				  	<br><br>
 
 				  	Confirm Password:<br>
-				    <input type="Password" onkeyup="confirm_password()" name="cpassword" placeholder="Confirm Password" autocomplete="off" required id="confirm_pass">
+				    <input type="Password" onkeyup="confirm_password()" name="conf_pass" placeholder="Confirm Password" autocomplete="off" required id="confirm_pass">
 
 				    <button class="icon" onclick="displayCON()"> <i class="fa fa-eye-slash" aria-hidden="true"></i> </button>
 				  	<br><br>
 				    
 				    <!--PASSWORD ALERT_TEXT -->
-					<span id="password_alert"> </span>
+					<span id="password_alert"> 
+					<?php 	
+ 						if(isset($GLOBALS['ERROR'])){
+
+							echo $GLOBALS['ERROR'];	
+				
+						}
+					
+						?>
+
+						
+					</span>
 					<br><br>
 
 				    <input class="checkbox" type="checkbox" name=" " value=" " required>I agree to the processing of my personal data according to our Privacy Policy.
@@ -137,7 +151,7 @@
 					<input class="checkbox" type="checkbox" name=" " value=" " required>I confirm that my name is correct and matches my government issued ID.
 					<br><br>
 
-				    <input id="btn" name="btn" onclick="password_alert()" class="signbutton" type="submit" value="Sign Up">
+				    <input id="btn" name="signup_btn" onclick="password_alert()" class="signbutton" type="submit" value="Sign Up">
 				    <br><br>
 		  		 
 					    <h4>Already have an account!<a href="Sign_in.php"> Sign In </a> </h4>

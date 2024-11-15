@@ -16,7 +16,11 @@
 		<link rel="stylesheet" type="text/css" href="CSS/Sign_in.css">
 	</head>
 
+	<?php 
 
+include 'signin_logic.php';
+
+?>
 	<body>
 		<div class="sides mobile-hidden">
 			<div class="left-side"> 
@@ -33,18 +37,27 @@
 				<div class="welcome-head">  <h2> Welcome back </h2> </div>
 
 				<div class="form">
+				<?php 
+	if(isset($GLOBALS['ERROR'])){
 
-					<form action="sign_in_logic.php" method="get">
+		echo $GLOBALS['ERROR'];	
+
+
+	}
+
+		
+						?>
+					<form action="" method="POST">
 						Email address:<br>
 					  	<input type="text" id="email" name="email" placeholder="email@gmail.com" autocomplete="on" required>
 					    <br><br>
 
 					    Password:<br>
-					    <input type="Password" id="pass_word" name="pass" placeholder="Password" autocomplete="off" required>
+					    <input type="Password" id="pass_word" name="password" placeholder="Password" autocomplete="off" required>
 					    <button onclick="displayPASS()" class="icon"><i class="fa fa-eye-slash" aria-hidden="true"></i> </button> 
 					  	<br><br>
 
-					    <input name="btn" class="signbutton" type="submit" value="sign in">
+					    <input name="signin_btn" class="signbutton" type="submit" value="sign in">
 					    <br><br>
 
 					    <a href="Forgot_password.html">Forgot Password?</a>
