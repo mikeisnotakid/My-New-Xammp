@@ -59,7 +59,7 @@ if (move_uploaded_file($tmp, $destination)){
       
       echo "<script>alert('Registration succesful');</script>";
   
-      header('Refresh: 2; URL=msreglogin.php');
+      header('Refresh: 0.5; URL=msreglogin.php');
   }
   
 
