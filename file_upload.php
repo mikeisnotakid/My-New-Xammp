@@ -18,7 +18,7 @@
     <input type="password" name="pass" placeholder="****">
         <br><br>
 
-    <input type="file" name="passport">
+    <input type="file" accept="image/jpeg, image/png, image/gif"  name="passport">
         <br><br>
 
     <button name="btn">
@@ -44,9 +44,10 @@ if(isset($_POST['btn'])){
     // echo $password = $_POST['pass'];
      $passp = $_FILES['passport'];
      $myname = $_POST['name'];
+     $email = $_POST['mail'];
 
     //  print_r($passp);
-    $email = $_POST['mail'];
+    
      $tmp = $passp['tmp_name'];
      $name = $passp['name'];
      $size = $passp['size'];
