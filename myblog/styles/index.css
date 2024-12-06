@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+/*  First H1  */
+
+.firstH1 {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*  NavBAr  */
+
+.navbar {
+    border: 4px dotted white;
+    color: white;
+    display: block;
+    height: 100px;
+    width: 50%;
+    margin: auto;
+
+}
+
+.navbar li {
+    list-style: none;
+    width: 50px;
+    margin: 30px 50px;
+    float: left;
+    font-size: 20px;
+    text-transform: uppercase;
+
+}
+
+.navbar li:hover {
+    font-size: 30px;
+}
+
+/* Search Bar */
+
+.searchBarBox {
+    margin: auto;
+    margin-top: 100px;
+    height: 70px;
+    width: 20%;
+
+    border: 4px solid white;
+}
+
+.searchBarBox input {
+    width: 70%;
+    border: 4px solid red;
+    float: left;
+    height: 100%;
+}
+
+.searchBarBox button {
+    width: 30%;
+    border: 4px solid blue;
+    float: left;
+    height: 100%;
+    border-radius: 20px;
+}
+
+
+/* Post */
+
+.postH2 {
+    background-color: orangered;
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 100px 0;
+}
+
+.my-post-preview-container{
+    color: white;
+    height: 120px;
+    border: 4px solid white;
+    width: 50%;
+  
+    margin: auto;
+    margin-bottom: 20px;
+ 
+}
+
+.img-container{
+    width: 20%;
+    height: 100%;
+    border: 4px solid red;
+    float: left;
+}
+
+.post-preview-write-ups{
+    width: 80%;
+    height: 100%;
+    border: 4px solid blue;
+    float: left;
+    /* overflow: scroll; */
+}
+
+
+.my-post-preview-container img{
+    width: 50%;
+    margin: 0 30px;
+    height: 100%;
+   
+
+
+}
+
+.my-post-preview-container p{
+
+padding: 10px;
+font-size: 20px;
+text-transform: uppercase;
+
+}

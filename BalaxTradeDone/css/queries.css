@@ -1,0 +1,231 @@
+/*****************************/
+/* BELOW 1218px (Landscape Tablets) */
+/*****************************/
+@media (max-width: 76em) {
+
+.html {
+    font-size: 60%;
+}
+    
+  .port-content {
+    grid-template-columns: 1fr;
+  }
+
+  .insight-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .balance {
+    justify-content: center;
+  }
+}
+
+/*****************************/
+/* BELOW 976px (Tablets) */
+/*****************************/
+
+
+@media (max-width: 60em) {
+
+  .user {
+    display: none;
+  }
+
+  .user-mobile {
+   display: block;
+  }
+
+  .user-mobile div {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .logout-btn-mobile:link {
+    display: block;
+  }
+
+
+   /* MOBILE NAVIGATION */
+
+   .btn-mobile-nav {
+    display: block;
+    z-index: 2000;
+  }
+
+  .main-nav {
+    background-color: #181818d7;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 70%;
+    margin: 0;
+    padding: 7rem 3rem 0;
+    z-index: 1000;
+    display: none;
+    position: fixed;
+  }
+
+  #open-nav {
+    display: block;
+  }
+  
+  .main-nav-links {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+
+  .main-nav-link:hover {
+   box-shadow: inset 60rem 0 0 0 #d0aa53;
+}
+
+  main {
+    width: 100%;
+    margin-left: auto;
+  }
+
+  footer {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .modal.content {
+    width: 45%;
+    top: 30%;
+    left: 25%;
+ }
+
+ 
+
+}
+
+/*****************************/
+/* BELOW 747px (Smaller Tablets) */
+/*****************************/
+
+@media (max-width: 47em) {
+  html {
+   font-size: 56%;     
+ }
+
+ .info-list th {
+    padding: 1rem 2rem;
+  }
+  
+  .info-list td {
+    padding: 1rem 2rem;
+  }
+  
+  .scout-text {
+    font-size: 1.1rem;
+  }
+
+    .scout-text {
+        font-size: 1.4rem;
+        line-height: 1.4;
+      }
+
+    .stats {
+        flex-direction: column;
+        gap: 2rem;
+        background: none;
+        align-items: center;
+      }
+      
+      .stats-items {
+        width: 90%;
+      }
+
+      .modal.content {
+        width: 45%;
+        top: 25%;
+        left: 25%;
+     }
+
+}
+
+
+/*****************************/
+/* BELOW 614px (Mobile Phones) */
+/*****************************/
+
+@media (max-width: 38em) {
+
+    html {
+        font-size: 50%;     
+      }
+     
+
+   .container {
+    padding: 0 1.5rem
+   }
+
+   .main {
+     padding: 0 1rem;
+
+   }
+
+
+    .logo-img {
+        height:3rem;
+        width: 13rem;
+      }
+
+    .info-list th {
+        padding: 1rem 0;
+      }
+      
+      .info-list td {
+        padding: 1rem 0;
+      }
+
+      .prog-icon {
+        width: 4rem;
+      }
+
+      .table th {
+        padding: 2rem 0.5rem;
+        font-size: 1.4rem;
+      }
+      
+      .table td {
+        font-size: 1.2rem;
+        padding: 1rem 0;
+      }
+
+
+      .crypto-logo {
+        width: 2.2rem;
+        height: 2.2rem;
+      }
+      
+      .change {
+        padding: 0.5rem;
+      }
+      
+      .change-red {
+        padding: 0.5rem;
+      }
+      
+      .invest-link:link,
+      .invest-link:visited {
+        padding: 0.5rem;
+      }
+      
+      
+      .modal.content {
+        width: 60%;
+        top: 20%;
+        left: 10%;
+    }
+
+    .crypto-icon {
+      transform: translateY(10%);
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "name": "boss/balax",
+    "description": "Good work",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Boss"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
