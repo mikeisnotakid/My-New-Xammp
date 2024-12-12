@@ -8,7 +8,7 @@ $db = 'teewon_fashion';
 $conn = mysqli_connect($server, $user, $password, $db);
 
 if($conn){
-    echo "connection success";
+    // echo "connection success";
 }else{
     echo "connection error";
 };

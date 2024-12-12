@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="Styles/login.css">
 </head>
+<?php include "loginLogic.php"; ?>
 <body>
 
  <div class="firstlogin-container">
@@ -13,19 +14,19 @@
     <h3>Welcome to Teewon Men's Fashion</h3>
 
     <p>Need a Teewon Men's Fashion Account?</p>
-    <a href="register.html">create an account</a>
+    <a href="register.php">create an account</a>
  </div>
 
 
 
     <form method="POST">
         <label>Username or Email</label>
-        <input type="text">
+        <input type="text" name="UsernameOREmail">
         <label>Password</label>
-        <input type="text">
+        <input type="text" name="passw">
         <!-- <input type="checkbox">
         <label>keep me logged in</label> -->
-        <button>Log in </button>
+        <button name="LoginBtn">Log in </button>
         <p>forgot username?</p>
         <p>forgot password?</p>
         <p>can't log in?</p>

@@ -21,11 +21,7 @@
 </head>
  
 
-<?php
-
-include 'connection.php';
-
-?>
+<?php include "indexlogic.php"; ?>
 
 
 
@@ -61,8 +57,18 @@ include 'connection.php';
                 </a>
 
             
-                <a href="login.html">
-                    <button name="LoginBtn">SignUp/Login</button>
+                <a href="login.php">
+                    <button name="LoginBtn">
+                    <?php 
+                    
+                    if(isset($_COOKIE['ID'])){
+                        echo $_COOKIE['name'];
+                    }else{
+                        echo 'SignUp/Login';
+                    }
+                    
+                    ?>    
+                    </button>
                 </a>
                 
 
