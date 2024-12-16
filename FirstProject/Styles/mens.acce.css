@@ -6,6 +6,48 @@
 }
 
 
+/* Login Alert */
+
+.login-alert{
+    height: 900px;
+    /* border: 4px solid red; */
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0, 0.9);
+    z-index: 50;
+    text-align: center;
+}
+
+.login-alert-container{
+    height: 100%;
+    width: 50%;
+    margin: auto;
+    /* border: 4px solid red; */
+}
+
+.login-alert-container h1{
+    padding: 10px 10px;
+    font-size: 80px;
+    color: white;
+}
+
+.login-alert-container button{
+height: 60px;
+width: 130px;
+border-radius: 10px;
+font-size: 20px;
+border: none;
+}
+.firstlineloginalert{
+    color: orangered;
+}
+.loginalertSecondBtn{
+    background-color: orangered;
+    color: white;
+}
 
 /* Grid View */
 

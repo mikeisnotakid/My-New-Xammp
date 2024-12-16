@@ -14,6 +14,25 @@
     <i class="fa-solid fa-store fa-store-Reloader"></i>
  </div>
 
+ <?php 
+                    
+                    if(isset($_COOKIE['ID'])){
+                       
+                    }else{
+                        echo '<div class="login-alert">
+                        <div class="login-alert-container">
+                            <h1> <span class="firstlineloginalert"> You need to create an account </span> or login to continue shopping</h1>
+                            <a href="login.php"><button>Login</button></a>
+                            <a href="register.php"><button class="loginalertSecondBtn">Register</button></a>
+                        </div>
+                     </div>';
+                      
+                      
+                    }
+              
+                    ?> 
+
+
     <!-- mens-shoes-first-section -->
 
     <div class="mens-shoes-first-section">

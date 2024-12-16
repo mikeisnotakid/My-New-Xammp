@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Styles/men.css">
+    <link rel="stylesheet" href="Styles/index.css">
     <title>Men</title>
 
 
@@ -33,6 +33,7 @@
      </div>
 
 
+
     <!-- first-heading-title -->
 
     <div class="first-heading-title">
@@ -58,7 +59,10 @@
 
             
                 <a href="login.php">
+                    <form method="POST">
                     <button name="LoginBtn">
+                    </form>
+                   
                     <?php 
                     
                     if(isset($_COOKIE['ID'])){
@@ -91,6 +95,24 @@
         </div>
     </div>
 
+<!-- Creating Post Containr -->
+
+<?php 
+                    
+                    if(isset($_COOKIE['ID'])){
+                        echo '<div class="myuploadpost">
+                        <div class="myuploadpost-main">
+                        <div class="myuploadpost-main-left">
+                        <input type="text" placeholder="What\'s on your mind?">
+                          </div>
+                        <div class="myuploadpost-main-right">
+                         <button>Post</button>
+                         </div>
+                        </div>
+                        </div>';
+                    }
+                    ?> 
+
 
     <!-- Second Men Banner -->
 
@@ -103,8 +125,7 @@
             <p>
                 Experience the energy return of responsive ZoomX cushioning—
                 designed to ignite your run.</p>
-
-            <button onclick="ChooseShop()"> Shop</button>
+                          <button onclick="ChooseShop()"> Shop</button>;
         </div>
     </div>
 

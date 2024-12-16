@@ -6,9 +6,6 @@
 }
 
 
-
-
-
 /* Grid View */
 
 .col-1 {
@@ -68,73 +65,81 @@
 
 
 /* Reloader */
-.reloader-container{
+.reloader-container {
     position: fixed;
-bottom: 0;
-top: 0;
-left: 0;
-right: 0;
- background-color: rgb(0, 0, 0 , 0.9);
-z-index: 50;
-text-align: center;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0, 0.9);
+    z-index: 50;
+    text-align: center;
 
-animation-name: MoveReloaderContainer;
-animation-duration: 0.2s;
-animation-delay: 1.5s;
+    animation-name: MoveReloaderContainer;
+    animation-duration: 0.2s;
+    animation-delay: 1.5s;
 }
 
 @keyframes MoveReloaderContainer {
-    10%{
-    transform: rotate(360deg);
+    10% {
+        transform: rotate(360deg);
     }
-    100%{
+
+    100% {
         transform: rotate(-360deg);
     }
-    
+
 }
 
-.fa-store-Reloader{
+.fa-store-Reloader {
     font-size: 250px;
     color: tomato;
     padding: 150px 0;
     animation-name: MoveFAstoreReloader;
     animation-duration: 1.5s;
     /* animation-iteration-count: infinite; */
-   
+
 }
+
 @keyframes MoveFAstoreReloader {
-    10%{
+    10% {
         font-size: 40px;
         color: white;
     }
-    20%{
+
+    20% {
         font-size: 100px;
         color: tomato;
     }
-    40%{
+
+    40% {
         font-size: 130px;
         color: white;
     }
-    60%{
+
+    60% {
         font-size: 150px;
         color: tomato;
     }
-    80%{
+
+    80% {
         font-size: 180px;
         color: white;
     }
-    100%{
+
+    100% {
         font-size: 250px;
         color: tomato;
     }
 }
+
 /* first-heading-title Styles */
 
 .first-heading-title {
     /* border: 4px solid red; */
     height: 100px;
 
-   
+
 }
 
 .first-heading-title-left,
@@ -145,7 +150,7 @@ animation-delay: 1.5s;
 }
 
 
-.first-heading-title-left-write-Up a{
+.first-heading-title-left-write-Up a {
     color: black;
     text-decoration: none;
 }
@@ -185,7 +190,7 @@ animation-delay: 1.5s;
     /* border: 4px solid green; */
     animation-name: ContentBody;
     animation-timeline: view();
-    animation-range: entry 0% cover 40% ; 
+    animation-range: entry 0% cover 40%;
 }
 
 .men-banner-container-Img-Div {
@@ -200,6 +205,61 @@ animation-delay: 1.5s;
 }
 
 
+/* Creating Post Containr */
+
+.myuploadpost {
+    height: 200px;
+    border: 4px solid red;
+    margin: 50px 0;
+    animation-name: moveUploadPostContainer;
+    animation-duration: 2s;
+
+}
+
+
+@keyframes moveUploadPostContainer {
+  
+    10%{
+        transform: translateX(-30%);
+    }
+
+    100%{
+        transform: translateX(100%);
+    }
+
+ 
+    
+}
+
+.myuploadpost-main{
+    height: 100%;
+    width: 50%;
+    border: 4px solid blue;
+    margin: auto;
+}
+
+
+.myuploadpost-main-left,
+.myuploadpost-main-right {
+margin: 20px 0;
+  width: 100%;
+ 
+}
+
+.myuploadpost-main-left input, .myuploadpost-main-right button{
+    height: 120px;
+    width: 70%;
+    float: left;
+    box-sizing: border-box;
+ 
+}
+
+.myuploadpost-main-right button{
+    width: 30%;
+}
+
+
+
 /* Second Men Banner */
 
 .men-banner-contaner2 {
@@ -207,7 +267,7 @@ animation-delay: 1.5s;
     padding: 50px 0;
     animation-name: ContentBody;
     animation-timeline: view();
-    animation-range: entry 0% cover 40% ; 
+    animation-range: entry 0% cover 40%;
 }
 
 .men-banner-contaner2-Content {
@@ -251,7 +311,7 @@ animation-delay: 1.5s;
     /* border: 4px solid green; */
     animation-name: ContentBody;
     animation-timeline: view();
-    animation-range: entry 0% cover 40% ; 
+    animation-range: entry 0% cover 40%;
 }
 
 .men-banner-container3-left {
@@ -422,7 +482,7 @@ button {
 
     animation-name: ContentBody;
     animation-timeline: view();
-    animation-range: entry 0% cover 40% ; 
+    animation-range: entry 0% cover 40%;
 }
 
 @keyframes ChangeBanner4 {
@@ -671,7 +731,7 @@ button {
     padding: 50px 0;
     animation-name: ContentBody;
     animation-timeline: view();
-    animation-range: entry 0% cover 40% ; 
+    animation-range: entry 0% cover 40%;
 }
 
 .men-banner-container5 h2 {
@@ -710,7 +770,7 @@ button {
     padding: 0 40px;
     animation-name: ContentBody;
     animation-timeline: view();
-    animation-range: entry 0% cover 40% ; 
+    animation-range: entry 0% cover 40%;
 
 }
 
@@ -1280,4 +1340,3 @@ button {
 
 
 }
-
