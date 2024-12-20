@@ -6,6 +6,7 @@
     <title>WhatsApp</title>
     <link rel="stylesheet" href="styles/index.css">
 </head>
+<?php include "indexLogic.php" ?> 
 <body>
 
 <!-- Login Alert -->
@@ -28,14 +29,26 @@
     
         <!-- add contact to send message to -->
         <div class="addCotactToSendto">
-            <input type="text" placeholder="Add UserName To Recieve message">
-            <button>Add Username</button>
+            <form method="post">
+            <input type="text" name="checkusername" placeholder="Username to send message to ">
+            <button name="checkusernamebtn" >Add Username</button>
+            <p><?php echo $_COOKIE['displayError'];  ?> </p>
+            </form>
         </div>
+    
+<form method="post">
+        <input type="text" name="sendmsgtoDb" placeholder="send a message" class="whatsappsMsgInput">
+        <button name="sendmsgtoDbbtn" class="whatsappsMsgButton">Send</button>
 
-        <input type="text" placeholder="send a message" class="whatsappsMsgInput">
-        <button class="whatsappsMsgButton">Send</button>
+</form>
 
-        <h2>Response from John</h2>
+        <h2><?php echo $_COOKIE['displayReciever'];  ?></h2>
+        <form method="POST">
+        <input type="text" name="recievemsg" placeholder="Add UserName To Recieve message">
+            <button name="recievemsgbtn" >Get Response</button>
+
+        </form>
+    
         <div class="showMessage">
         </div>
     </div>
