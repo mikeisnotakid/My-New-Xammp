@@ -14,7 +14,7 @@
     <h3>Welcome to Mike WhatsApp</h3>
 
     <p>Need a Mike WhatsApp Account?</p>
-    <a href="register.html">create an account</a>
+    <a href="register.php">create an account</a>
  </div>
 
 

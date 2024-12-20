@@ -16,7 +16,7 @@ include "registerLogic.php";?>
         <h3>Welcome Mike WhatsApp</h3>
     
         <p>Already have Mike WhatsApp?</p>
-        <a href="login.html">login</a>
+        <a href="login.php">login</a>
      </div>
 
     <form method="POST">

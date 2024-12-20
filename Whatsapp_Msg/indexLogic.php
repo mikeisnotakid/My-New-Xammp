@@ -98,7 +98,7 @@ function sendingMessagestoDb(){
 
         // echo $_COOKIE['JoinMsgUsername'];
     
-echo ;
+
     $sendmsgtoDb = $_POST['sendmsgtoDb'];
 
 //     $addmsgafterpassword = "ALTER TABLE mikedata ADD ";
