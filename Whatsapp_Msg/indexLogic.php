@@ -90,8 +90,64 @@ setcookie('displayReciever','Response from '.$name, time()+60*60*24);
 
 
 function sendingMessagestoDb(){
+    global $conn;
+
+//    $num = mysqli_num_rows($sql);
 
     if(isset($_POST['sendmsgtoDbbtn'])){
+
+        $sendmsgtoDb = $_POST['sendmsgtoDb'];
+
+   $altertable = "ALTER TABLE mikedata ADD $sendmsgtoDb VARCHAR(1000) AFTER Password";
+   
+   $sql = mysqli_query($conn, $altertable);
+
+
+
+}
+
+}
+ 
+//    $sql = mysqli_query($conn, $altertable);
+//    $select = "SELECT * FROM mikedata WHERE Username = 'mike1' " ;
+
+//    $sql2 = mysqli_query($conn, $select);
+
+//    $num = mysqli_num_rows($sql2);
+
+
+//     $insert = "INSERT INTO mikedata (mymessage12) VALUES ('$sendmsgtoDb')";
+//     $sql3 = mysqli_query($conn, $insert);
+
+
+
+ 
+    
+// $sql = mysqli_query($conn, $select);
+
+
+
+  
+
+
+//    $select = "SELECT * FROM mikedata WHERE Username = '$username' " ;
+    
+//    $sql = mysqli_query($conn, $select);
+   
+//    $num = mysqli_num_rows($sql);
+   
+//    if($sql){
+
+
+
+//     echo "<script>alert('Sent');</script>";
+
+//    }else{
+       
+//     echo "<script>alert('Error');</script>";
+//    }
+
+
 
         //echo $name;
         
@@ -99,16 +155,26 @@ function sendingMessagestoDb(){
         // echo $_COOKIE['JoinMsgUsername'];
     
 
-    $sendmsgtoDb = $_POST['sendmsgtoDb'];
+   
 
-//     $addmsgafterpassword = "ALTER TABLE mikedata ADD ";
+    // Alter Table
 
-// $sql = mysqli_query($conn, $select);
- 
-    }else{
 
-    }
-}
+
+
+
+
+
+   
+   
+      
+    
+   
+       
+
+
+
+        
 
 sendingMessagestoDb();
 
