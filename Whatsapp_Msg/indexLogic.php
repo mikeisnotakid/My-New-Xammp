@@ -1,5 +1,6 @@
 <?php 
- include "connection.php";           
+ include "connection.php";       
+   
                   
                    
 function  checkusetnamee(){
@@ -89,25 +90,143 @@ setcookie('displayReciever','Response from '.$name, time()+60*60*24);
 }
 
 
+function LogOutBtn(){
+    
+    if(isset($_POST['logoutbtn'])){
+
+        if(isset($_COOKIE['ID'])){
+            $id = $_COOKIE['ID'];
+            setcookie('ID', $id, time() -3600);
+        }else{
+            
+           
+        }
+    
+        if(isset($_COOKIE['Name'])){
+            $Name = $_COOKIE['Name'];
+            setcookie('Name', $Name, time() -3600);
+        }else{
+           
+          
+        }
+      
+    
+        if(isset($_COOKIE['Username'])){
+            $Username = $_COOKIE['Username'];
+            setcookie('Username', $Username, time() -3600);
+        }else{
+          
+            
+        }
+
+        
+        
+        
+        
+    }
+
+
+
+    
+}
+ 
+
+
+
 function sendingMessagestoDb(){
     global $conn;
 
 //    $num = mysqli_num_rows($sql);
 
+// $storesendmsgtoDb  = [];
+
+
     if(isset($_POST['sendmsgtoDbbtn'])){
+        
+
+       
 
         $sendmsgtoDb = $_POST['sendmsgtoDb'];
 
-   $altertable = "ALTER TABLE mikedata ADD $sendmsgtoDb VARCHAR(1000) AFTER Password";
+
+       
+
+       
+    
+
+// array_push($storesendmsgtoDb, $sendmsgtoDb);
+
+
+
+
+        
+
+//    $altertable = "ALTER TABLE mikedata ADD $sendmsgtoDb VARCHAR(1000) AFTER Password";
    
-   $sql = mysqli_query($conn, $altertable);
+//    $sql = mysqli_query($conn, $altertable);
+
+// echo $sendmsgtoDb;
 
 
 
 }
 
+if(isset($_POST['checkusernamebtn'])){
+    $checkusername = $_POST['checkusername'];
+    $select = "SELECT * FROM mikedata WHERE Username = '$checkusername'";
+    
+    $sql = mysqli_query($conn, $select);
+    
+    $fetch = mysqli_fetch_assoc($sql);
+
+    $Getusername = $fetch['Username'];
+
+   
+
+   
+    // echo $Getusername;
+
+    // $joinPostandUsername = $Getusername ." " . $sendmsgtoDb;
+
+    // echo $joinPostandUsername;
+
+    // array_push($storesendmsgtoDb ,  $Getusername[1]);
 }
- 
+
+
+if(isset($_POST['recievemsgbtn'])){
+    $recievemsg = $_POST['recievemsg'];
+$select = "SELECT * FROM mikedata WHERE Username = '$recievemsg' ";
+
+$sql = mysqli_query($conn, $select);
+
+$fetch = mysqli_fetch_assoc($sql);
+
+
+$username = $fetch['Username'];
+
+}
+
+$GetandUsername = $Getusername . " " . $username;
+
+// setcookie('PushMyDetails', $GetandUsername , time()+60*60*24);
+
+
+echo $GetandUsername;
+
+// echo $Getusername;
+// echo $username;
+
+
+
+// echo $_COOKIE['PushMyDetails'];
+
+// print_r($storesendmsgtoDb);
+// print_r($storeUsername);
+
+}
+
+
 //    $sql = mysqli_query($conn, $altertable);
 //    $select = "SELECT * FROM mikedata WHERE Username = 'mike1' " ;
 
@@ -181,6 +300,8 @@ sendingMessagestoDb();
 recievemsg();
 
 checkusetnamee();
+
+LogOutBtn();
 
 
 

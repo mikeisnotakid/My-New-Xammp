@@ -4,6 +4,8 @@ include "connection.php";
 
 
 
+
+
 if (isset($_POST['LoginBtn'])){
 
 
@@ -61,10 +63,25 @@ if (isset($_POST['LoginBtn'])){
 }
 
 
+// function LogOutBtn(){
+//   if(isset($_POST['logoutbtn'])){
+//       setcookie('ID', $id, time() -3600);
+
+//       setcookie('Name', $Name, time() -3600);
+//       setcookie('Username', $Username, time() -3600);
+//   }
+
+
+
+  
+// }
+
+
 
     // echo $_COOKIE['ID'];
 // echo $fetch;
 
+// LogOutBtn();
 
 ?>
 

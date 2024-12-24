@@ -59,20 +59,7 @@
 
             
                 <a href="login.php">
-                    <form method="POST">
-                    <button name="LoginBtn">
-                    </form>
-                   
-                    <?php 
-                    
-                    if(isset($_COOKIE['ID'])){
-                        echo $_COOKIE['name'];
-                    }else{
-                        echo 'SignUp/Login';
-                    }
-                    
-                    ?>    
-                    </button>
+                    <button name="LoginBtn"> login </button>
                 </a>
                 
 

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chat App</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style type="text/css">
+        body {
+            background-color: #F0F2F5;
+        }
+
+        #container {
+            border: 1px solid white;
+            height: 540px;
+            width: 620px;
+            margin-left: 350px;
+            background-color: white;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        #chat {
+            border: 1px solid white;
+            width: 600px;
+            height: 350px;
+            margin-left: 0px;
+            max-height: 350px;
+            overflow: auto;
+            padding: 10px;
+        }
+
+        #message {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        #message_box {
+            width: 450px;
+            height: 60px;
+            background-color: #E4E6EB;
+            border-radius: 20px;
+            border: 1px solid #E4E6EB;
+            padding-left: 20px;
+            float: left;
+        }
+
+        #send {
+            width: 100px;
+            height: 60px;
+            border-radius: 20px;
+            margin-left: 10px;
+            border: 1px solid #E4E6EB;
+            background-color: #E4E6EB;
+        }
+
+        #send:hover {
+            background-color: blue;
+            cursor: pointer;
+        }
+
+        #chat_box_message1 {
+            border: 1px solid #0099FF;
+            background-color: #0099FF;
+            max-width: 30%;
+            margin-left: 350px;
+            overflow-y: auto;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 10px;
+            height: auto;
+            color: white;
+            margin-top: 20px;
+        }
+
+        #chat_box_message2 {
+            border: 1px solid #E4E6EB;
+            background-color: #E4E6EB;
+            max-width: 30%;
+            overflow-y: auto;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 10px;
+            margin-left: 25px;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            float: left;
+            margin-left: 10px;
+            margin-top: 9px;
+        }
+
+        #logout {
+            font-weight: bold;
+            text-decoration: none;
+            float: right;
+            margin-right: 30px;
+            margin-top: 24px;
+        }
+
+        #logout:hover {
+            color: red;
+        }
+
+        #send_icon:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+
+        <div style="">
+            <img src="image/default-profile.png"> <!-- Default image for user -->
+            <label style="float: left; margin-left: 10px; margin-top: 27px; font-weight: bold;">Username</label> 
+            <a id="logout" href="logout.php">Logout</a><br><br><br>
+            <hr>
+        </div>
+
+        <div id="chat">
+            <!-- Example static chat messages -->
+            <div id="chat_box_main1">
+                <div id="chat_box_message1">
+                    Hello, how are you?
+                </div>
+                <div style="margin-left: 400px;">
+                    December 24 at 3:00 PM
+                </div>
+            </div>
+
+            <div id="chat_box_main2">
+                <img style="margin-right: 10px;" src="image/default-profile.png">
+                <div id="chat_box_message2">
+                    I'm good, thanks! How about you?
+                </div>
+                <div style="margin-left: 120px; margin-top:">
+                    December 24 at 3:05 PM
+                </div>
+            </div>
+
+        </div>
+
+        <div id="message">
+            <form method="POST">
+                <input id="message_box" type="text" name="message" placeholder="Write message" required>
+                <!-- No PHP here for user data, just static example -->
+                <input type="text" name="name" value="Username" hidden>
+                <input type="text" name="email" value="user@example.com" hidden>
+                <input type="text" name="image" value="default-profile.png" hidden>
+                <button id="send_icon" type="submit" name="send" style="background: none; border: none;">
+                    <img style="width: 70px; height: 57px; float: left; margin-top: 0px;" src="send.png">
+                </button>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

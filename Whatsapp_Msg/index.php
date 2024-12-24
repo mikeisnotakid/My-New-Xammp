@@ -6,7 +6,9 @@
     <title>WhatsApp</title>
     <link rel="stylesheet" href="styles/index.css">
 </head>
-<?php include "indexLogic.php" ?> 
+<?php 
+include "indexLogic.php"; ?> 
+
 <body>
 
 <!-- Login Alert -->
@@ -14,25 +16,42 @@
                     
                     if(isset($_COOKIE['ID'])){
        
-                   echo 'logged in';
+               
+                   echo '<form method="POST">
+                    <button name="logoutbtn">LogOut</button>
+                    </form>';
                     }else{
                         
-                      echo "id not found";
+                      echo '<a href="login.php"><button>Login</button></a>';
                       
                     }
               
                     ?> 
 
+                    
 
     <div class="whatsappMsgbox">
-        <h2>Welcome <?php echo $_COOKIE['Username'];  ?> </h2>
+        <h2>Welcome <?php 
+          if(isset($_COOKIE['Username'])){
+            echo $_COOKIE['Username'];  
+          }else{
+            echo 'not found loggin!!';
+          }
+        ?> </h2>
     
         <!-- add contact to send message to -->
         <div class="addCotactToSendto">
             <form method="post">
             <input type="text" name="checkusername" placeholder="Username to send message to ">
             <button name="checkusernamebtn" >Add Username</button>
-            <p><?php echo $_COOKIE['displayError'];  ?> </p>
+            <p><?php
+           if(isset($_COOKIE['displayError'])){
+            echo $_COOKIE['displayError']; 
+           }else{
+          
+           
+           }
+            ?> </p>
             </form>
         </div>
     
@@ -42,7 +61,15 @@
 
 </form>
 
-        <h2><?php echo $_COOKIE['displayReciever'];  ?></h2>
+
+        <h2><?php
+           if(isset($_COOKIE['displayReciever'])){
+            echo $_COOKIE['displayReciever'];
+           }else{
+        
+           }
+        
+         ?></h2>
         <form method="POST">
         <input type="text" name="recievemsg" placeholder="Add UserName To Recieve message">
             <button name="recievemsgbtn" >Get Response</button>
