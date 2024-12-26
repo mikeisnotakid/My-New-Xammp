@@ -8,6 +8,7 @@ if (isset($_POST['RegBtn'])){
     $realname = $_POST['realname'];
     $email = $_POST['email'];
     $passw = $_POST['passw'];
+  
 
 
 
