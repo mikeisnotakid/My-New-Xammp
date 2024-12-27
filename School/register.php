@@ -59,7 +59,7 @@
 <!-- Form -->
 
 
-    <form action="" method="POST" >
+    <form action="" method="POST"  enctype="multipart/form-data">
     <div class="mb-3 container" >   
   <label for="exampleFormControlInput1" class="form-label" id="Register">First Name</label>
   <input name="firstname" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Teewon">
