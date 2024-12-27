@@ -7,6 +7,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/index.css">
   </head>
+  <?php
+include "loginLogic.php";
+
+?>
   <body>
 
     <!-- Navbar  -->
@@ -38,9 +42,39 @@
         </li>
       </ul>
       <span class="navbar-text">
-        <a href="login.php">login </a> or <a href="register.php">register</a> 
+      <?php    
+                     if(isset($_COOKIE['ID'])){
+                       echo $_COOKIE['name'];
+                    }else{
+                      echo "<a href='login.php'>login </a> or <a href='register.php'>register</a>";
+                    }
+                    ?>
+      
         <!-- to show only when the user have loged in -->
-        <img src="images/Teewon Logo.jpg" alt="user profile pics">
+        <?php 
+             
+             
+                    if(isset($_COOKIE['ID'])){
+                      // echo $_COOKIE["myimage"];
+                    
+      
+                     
+                      echo "<img src='upload/{$_COOKIE['myimage']}' alt='user profile pics'>";
+                      
+                      echo "<form  method='POST'>
+                      <button name='LogOutBtn'>Log Out</button>
+                       </form>";
+
+
+
+                       
+                   }else{
+                     echo '<svg  xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+</svg>';
+                   }
+                   ?>
+      
       </span>
     </div>
   </div>
@@ -56,4 +90,5 @@
 </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
+  
 </html>

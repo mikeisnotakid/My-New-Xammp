@@ -4,6 +4,7 @@ include "connection.php";
 
 
 
+
 if (isset($_POST['LoginBtn'])){
 
 
@@ -12,7 +13,7 @@ if (isset($_POST['LoginBtn'])){
 
 
 
-    $select = "SELECT * FROM teewon_fashion_data WHERE Email = '$UsernameOREmail' OR username = '$UsernameOREmail' AND password = '$passw'";
+    $select = "SELECT * FROM students_data WHERE Email = '$UsernameOREmail' OR username = '$UsernameOREmail' AND password = '$passw'";
     $sql = mysqli_query($conn, $select);
 
 
@@ -28,8 +29,9 @@ if (isset($_POST['LoginBtn'])){
 
       $id = $fetch['id'];
       
-      $name = $fetch['Name'];
-      $emai = $fetch['Email'];
+      $name = $fetch['first_name'];
+      $email = $fetch['email'];
+      $myimage = $fetch['image'];
   
 
       echo "<script>alert('Welcome');</script>";
@@ -37,16 +39,17 @@ if (isset($_POST['LoginBtn'])){
 
     //   print_r($fetch);
 
-      header('Refresh: 0.5; URL=index.php');
+      header('Refresh: 0.1; URL=index.php');
 
       setcookie('ID', $id, time()+60*60*24);
-	// setcookie('email', $Email, time()+60*60*24);
+	setcookie('myimage', $myimage, time()+60*60*24);
     setcookie('name', $name, time()+60*60*24);
 
 
       
     }else{
         echo "<script>alert('Details not found');</script>";
+
     //   echo "";
     }
 
@@ -54,9 +57,17 @@ if (isset($_POST['LoginBtn'])){
 }
 
 
+if (isset($_POST['LogOutBtn'])){
+    setcookie('ID', $id, time()-3600);
+  setcookie('myimage', $myimage, time()-3600);
+    setcookie('name', $name, time()-3600);
+    header('Refresh: 0.01; URL=index.php');
+}
 
     // echo $_COOKIE['ID'];
 // echo $fetch;
+
+
 
 
 ?>

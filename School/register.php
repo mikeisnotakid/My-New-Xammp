@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Register</title>
+    <title>Register Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <link rel="stylesheet" href="styles/registerstyles.css">
   </head>
@@ -52,8 +52,8 @@
 
 <h1 class="text-center">Welcome to Teewon School </h1>
 
-<p class="text-center"> <span> <a href="#Register">register now </a></span>to get online acccess as a student of Teewon School </p>
-<p class="text-center">if you already have an account <span><a href="login.php">login now</a></span> to enjoy online acccess</p>
+<p class="text-center"> <span> <a href="#Register">Register now </a></span>to get online acccess as a student of Teewon School </p>
+<p class="text-center">if you already have an account <span><a href="login.php">Login now</a></span> to enjoy online acccess</p>
 
 
 <!-- Form -->
