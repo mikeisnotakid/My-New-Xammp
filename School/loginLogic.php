@@ -32,18 +32,24 @@ if (isset($_POST['LoginBtn'])){
       $name = $fetch['first_name'];
       $email = $fetch['email'];
       $myimage = $fetch['image'];
+      $gender = $fetch['gender'];
+      $username = $fetch['username'];
+      $country = $fetch['country'];
+  
   
 
       echo "<script>alert('Welcome');</script>";
 
 
-    //   print_r($fetch);
+      // print_r($fetch);
 
       header('Refresh: 0.1; URL=index.php');
 
       setcookie('ID', $id, time()+60*60*24);
 	setcookie('myimage', $myimage, time()+60*60*24);
     setcookie('name', $name, time()+60*60*24);
+    setcookie('gender', $gender, time()+60*60*24);
+    setcookie('country', $country, time()+60*60*24);
 
 
       

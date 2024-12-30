@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Teewon Schools</title>
+    <title>Student Portal</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/portal.css">
+  
   </head>
   <?php
 include "loginLogic.php";
@@ -80,14 +81,27 @@ include "loginLogic.php";
   </div>
 </nav>
 
-<!-- hero section -->
-<div class="heroimg ">
-  <div class="writings text-center">
-    <h1>Admissions</h1>
-    <button type="button" class="btn btn-primary btn-lg">Check Admisions Status</button>
-<button type="button" class="btn btn-secondary btn-lg">Apply for Admissions</button>
-  </div>
-</div>
+
+<!-- Profile container -->
+<div class="profile-container">
+<?php 
+  if(isset($_COOKIE['ID'])){
+    echo  "<img  class='profile-img'  src='upload/{$_COOKIE['myimage']}' alt='user profile pics'>";
+
+    echo "<h1 class='profile-H1'>{$_COOKIE['name']}</h1>";
+    echo "<p>{$_COOKIE['gender']}</p>";
+    echo "<p>{$_COOKIE['name']} From {$_COOKIE['country']}</p>";
+
+
+
+  }
+
+   ?>
+
+
+</div
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
   
